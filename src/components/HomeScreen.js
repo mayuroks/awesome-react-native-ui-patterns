@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, FlatList } from 'react-native';
 import personalities from '../personalities.json';
+import { DETAILS } from '../config/Router';
 
 /** 
  * 0. Import data from personalities.json - DONE
@@ -24,7 +25,7 @@ class HomeScreen extends Component {
 
     showDetails(item) {
         console.log(item);
-        this.props.navigation.navigate('Details');
+        this.props.navigation.navigate(DETAILS);
     }
 
     _keyExtractor = ({ item }, index) => {
