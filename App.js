@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
-import HomeScreen from './src/components/HomeScreen';
+import AppContainer from './src/config/Router';
 
 export default App = () => {
-    return <HomeScreen></HomeScreen>
+    return <AppContainer />
 }

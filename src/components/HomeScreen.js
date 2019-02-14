@@ -24,6 +24,7 @@ class HomeScreen extends Component {
 
     showDetails(item) {
         console.log(item);
+        this.props.navigation.navigate('Details');
     }
 
     _keyExtractor = ({ item }, index) => {
