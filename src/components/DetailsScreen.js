@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Text, View, Flatlist, StyleSheet, Image } from 'react-native';
-import { FluidNavigator, Transition } from 'react-navigation-fluid-transitions';
 
 const LogoImage = (props) => (
     <Image source={{ uri: 'https://picsum.photos/100/100?image=56' }} style={props.style} />
@@ -19,9 +18,7 @@ class DetailsScreen extends Component {
 
         return (
             <View>
-                <Transition shared="logo">
-                    <LogoImage style={styles.largeLogo} />
-                </Transition>
+                <LogoImage style={styles.largeLogo} />
                 <Text>{personalityType}</Text>
             </View>
         );

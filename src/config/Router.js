@@ -2,17 +2,20 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 import HomeScreen from '../components/HomeScreen';
 import DetailsScreen from '../components/DetailsScreen';
 import { Animated, Easing } from 'react-native';
-import { FluidNavigator, Transition } from 'react-navigation-fluid-transitions';
+import BSScreen from '../components/bottomsheet/BSScreen';
 
 export const HOME = "Home";
 export const DETAILS = "Details";
+export const BSSHEET = "BottomSheet";
 
 const AppNavigator = createStackNavigator(
     {
         [HOME]: HomeScreen,
-        [DETAILS]: DetailsScreen
+        [DETAILS]: DetailsScreen,
+        [BSSHEET]: BSScreen
     },
     {
+        initialRouteName: BSSHEET,
         headerMode: 'float',
         mode: 'card',
         defaultNavigationOptions: {
@@ -44,11 +47,6 @@ const AppNavigator = createStackNavigator(
         }),
     }
 );
-
-const Navigator = FluidNavigator({
-    [HOME]: { screen: HomeScreen },
-    [DETAILS]: { screen: DetailsScreen }
-});
 
 const AppContainer = createAppContainer(AppNavigator);
 

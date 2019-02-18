@@ -9,7 +9,9 @@
   "dependencies": {
     "react": "16.6.3",
     "react-native": "0.58.4",
+    "react-native-bottom-action-sheet": "0.0.19",
     "react-native-gesture-handler": "^1.0.15",
+    "react-native-vector-icons": "^6.3.0",
     "react-navigation": "^3.2.3"
   },
   "devDependencies": {
