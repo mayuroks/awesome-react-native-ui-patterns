@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Text, View, FlatList } from 'react-native';
+import { Text, View, FlatList, Image } from 'react-native';
 import personalities from '../personalities.json';
 import { DETAILS } from '../config/Router';
 
 /** 
  * 0. Import data from personalities.json - DONE
  * 
- * 1. Setup a Flat list
+ * 1. Steps to setup a Flat list
  *      - data
  *      - renderItem
  *      - keyExtractor
@@ -21,7 +21,22 @@ import { DETAILS } from '../config/Router';
  * 4. On Click go to Details Screen and pass data to display in params
 */
 
+class LogoTitle extends React.Component {
+    render() {
+        return (
+            <Image
+                source={{ uri: 'https://picsum.photos/100/100?image=56' }}
+                style={{ marginLeft: 40, width: 40, height: 40 }}
+            />
+        );
+    }
+}
+
 class HomeScreen extends Component {
+
+    static navigationOptions = {
+        headerTitle: <LogoTitle />
+    };
 
     showDetails(item) {
         console.log(item);
